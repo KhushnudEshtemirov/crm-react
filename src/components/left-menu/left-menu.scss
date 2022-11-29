@@ -49,6 +49,25 @@
           transition: 0.3s;
           border-radius: 8px;
 
+          a {
+            width: 100%;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+
+            svg {
+              font-size: 1.5rem;
+              margin-right: 16px;
+              color: #9197B3;
+  
+              &:last-child {
+                font-size: 0.8rem;
+                margin: 0;
+                margin-left: auto;
+              }
+            }
+          }
+
           span {
             color: #9197B3;
           }
@@ -69,18 +88,6 @@
             border: 2px solid #9197B3;
             border-radius: 8px;
             font-size: 1.6rem;
-          }
-          
-          svg {
-            font-size: 1.5rem;
-            margin-right: 16px;
-            color: #9197B3;
-
-            &:last-child {
-              font-size: 0.8rem;
-              margin: 0;
-              margin-left: auto;
-            }
           }
 
           &.active,

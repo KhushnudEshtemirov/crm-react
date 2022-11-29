@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 import "./left-menu.scss";
 
@@ -44,27 +45,39 @@ const LeftMenu = () => {
         <div className="left-middle">
           <ul>
             <li className="active">
-              <TiKeyOutline /> <span>Dashboard</span>
+              <Link to="/">
+                <TiKeyOutline /> <span>Dashboard</span>
+              </Link>
             </li>
             <li>
-              <HiOutlineCube /> <span>Guruhlar</span>
-              <SlArrowRight />
+              <Link to="/group">
+                <HiOutlineCube /> <span>Guruhlar</span>
+                <SlArrowRight />
+              </Link>
             </li>
             <li>
-              <BiUser /> <span>O'quvchilar</span>
-              <SlArrowRight />
+              <Link to="/student">
+                <BiUser /> <span>O'quvchilar</span>
+                <SlArrowRight />
+              </Link>
             </li>
             <li>
-              <BsCardList /> <span>Dars jadvali</span>
-              <SlArrowRight />
+              <Link to="/schedule">
+                <BsCardList /> <span>Dars jadvali</span>
+                <SlArrowRight />
+              </Link>
             </li>
             <li>
-              <TfiSettings /> <span>Sozlamalar</span>
-              <SlArrowRight />
+              <Link to="/setting">
+                <TfiSettings /> <span>Sozlamalar</span>
+                <SlArrowRight />
+              </Link>
             </li>
             <li>
-              <SlQuestion /> <span>Yordam</span>
-              <SlArrowRight />
+              <Link to="/help">
+                <SlQuestion /> <span>Yordam</span>
+                <SlArrowRight />
+              </Link>
             </li>
           </ul>
         </div>

@@ -58,6 +58,11 @@
             }
           }
 
+          &:hover p,
+          &.active p {
+            font-weight: 700;
+          }
+
           .outer-div {
             width: 40px;
             background: none;
@@ -73,11 +78,6 @@
               border-radius: 8px;
               cursor: pointer;
               transition: 0.1s;
-            }
-
-            &:hover ~ p,
-            &.active ~ p {
-              font-weight: 700;
             }
           }
 
