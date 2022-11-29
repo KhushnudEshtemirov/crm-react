@@ -1,0 +1,267 @@
+.left-menu {
+  width: 306px;
+  height: 100vh;
+  box-shadow: 4px 0 40px rgba($color: #d8d6d6, $alpha: 0.5);
+  padding: 40px 30px;
+  float: left;
+  transition: 0.4s;
+  background: #fff;
+
+  .menu-container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    .left-top {
+      display: flex;
+      align-items: center;
+      font-size: 1.7rem;
+
+      div {
+        display: flex;
+        align-items: center;
+      }
+
+      svg {
+        font-size: 2.5rem;
+        margin-right: 12px;
+        cursor: pointer;
+      }
+
+      .dashboard {
+        font-weight: 600;
+      }
+    }
+
+    .left-middle {
+      margin-top: 40px;
+
+      ul {
+        list-style: none;
+    
+        li {
+          display: flex;
+          height: 46px;
+          margin-top: 18px;
+          align-items: center;
+          padding: 0 13px;
+          cursor: pointer;
+          transition: 0.3s;
+          border-radius: 8px;
+
+          span {
+            color: #9197B3;
+          }
+
+          &:first-child svg {
+            border: 2px solid #fff;
+            border-radius: 8px;
+            font-size: 1.6rem;
+          }
+
+          &:nth-child(2) svg:first-child {
+            border: 2px solid #9197B3;
+            border-radius: 8px;
+            font-size: 1.7rem;
+          }
+
+          &:nth-child(3) svg:first-child {
+            border: 2px solid #9197B3;
+            border-radius: 8px;
+            font-size: 1.6rem;
+          }
+          
+          svg {
+            font-size: 1.5rem;
+            margin-right: 16px;
+            color: #9197B3;
+
+            &:last-child {
+              font-size: 0.8rem;
+              margin: 0;
+              margin-left: auto;
+            }
+          }
+
+          &.active,
+          &:hover {
+            background: #5932EA;
+            color: #fff;
+
+            span {
+              color: #fff;
+            }
+
+            svg:first-child {
+              border-color: #fff;
+            }
+
+            * {
+              color: #fff;
+            }
+          }
+        }
+      }
+    }
+
+    .left-bottom {
+      margin-top: auto;
+
+      .timer {
+        background: linear-gradient(107.91deg, #EAABF0 7.37%, #4623E9 95.19%);
+        border-radius: 20px;
+        height: 120px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        svg {
+          display: none;
+        }
+
+        span {
+          font-size: 2rem;
+          font-weight: 600;
+          color: #fff;
+        }
+      }
+
+      .user-detail {
+        display: flex;
+        align-items: center;
+        margin-top: 32px;
+
+        .user-img {
+          width: 50px;
+          height: 50px;
+          border-radius: 50%;
+          overflow: hidden;
+          margin-right: 5px;
+
+          img {
+            width: 100%;
+          }
+        }
+
+        .name-job {
+          p {
+            font-size: 0.8rem;
+            font-weight: 500;
+          }
+
+          span {
+            font-size: 0.75rem;
+            color: #757575;
+          }
+        }
+
+        svg {
+          margin-left: auto;
+          color: #757575;
+          font-size: 0.8rem;
+        }
+      }
+    }
+  }
+
+  &.hidden {
+    width: 110px;
+
+    .menu-container {
+      .left-top {
+        justify-content: center;
+
+        svg {
+          font-size: 2.6rem;
+          margin: 0;
+        }
+        span {
+          display: none;
+        }
+      }
+
+      .left-middle {
+        ul {
+          li {
+            padding: 0 5px;
+            justify-content: center;
+            span {
+              display: none;
+              position: absolute;
+              transform: translateX(90px);
+              background: #5932EA;
+              padding: 8px 16px;
+              border-radius: 8px;
+              white-space: nowrap;
+              color: #fff;
+
+            }
+            
+            &:hover span {
+              display: block;
+            }
+
+            svg {
+              margin: 0;
+            }
+
+            svg:last-child {
+              display: none;
+            }
+          }
+        }
+      }
+
+      .left-bottom {
+        .timer {
+          background: none;
+          height: auto;
+          padding: 10px 8px;
+          border-radius: 8px;
+          cursor: pointer;
+
+          &:hover {
+            background: #4623E9;
+
+            svg {
+              color: #fff;
+            }
+          }
+
+          svg {
+            cursor: pointer;
+            font-size: 1.5rem;
+            color: #9197B3;
+            display: block;
+
+            &:hover ~ span {
+              display: block;
+            }
+          }
+
+          span {
+            display: none;
+            position: absolute;
+            transform: translateX(100px);
+            background: #5932EA;
+            padding: 8px 16px;
+            border-radius: 8px;
+            white-space: nowrap;
+            color: #fff;
+            font-size: 1.5rem;
+          }
+        }
+
+        .user-detail {
+          .name-job {
+            display: none;
+          }
+          svg {
+            display: none;
+          }
+        }
+
+      }
+    }
+  }
+}
