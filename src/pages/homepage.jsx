@@ -118,8 +118,8 @@ const Homepage = () => (
               >
                 <defs>
                   <linearGradient id="GradientColor">
-                    <stop offset="0%" stop-color="#BB84EE" />
-                    <stop offset="100%" stop-color="#4623E9" />
+                    <stop offset="0%" stopColor="#BB84EE" />
+                    <stop offset="100%" stopColor="#4623E9" />
                   </linearGradient>
                 </defs>
                 <circle cx="100" cy="100" r="75" />
@@ -134,8 +134,8 @@ const Homepage = () => (
               >
                 <defs>
                   <linearGradient id="GradientColor1">
-                    <stop offset="0%" stop-color="#CDF4FF" />
-                    <stop offset="100%" stop-color="#FF007A" />
+                    <stop offset="0%" stopColor="#CDF4FF" />
+                    <stop offset="100%" stopColor="#FF007A" />
                   </linearGradient>
                 </defs>
                 <circle cx="100" cy="100" r="73" />

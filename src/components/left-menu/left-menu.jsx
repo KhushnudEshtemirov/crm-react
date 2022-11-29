@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useMatch, useResolvedPath } from "react-router-dom";
 
 import "./left-menu.scss";
 
@@ -44,41 +44,29 @@ const LeftMenu = () => {
         </div>
         <div className="left-middle">
           <ul>
-            <li className="active">
-              <Link to="/">
-                <TiKeyOutline /> <span>Dashboard</span>
-              </Link>
-            </li>
-            <li>
-              <Link to="/group">
-                <HiOutlineCube /> <span>Guruhlar</span>
-                <SlArrowRight />
-              </Link>
-            </li>
-            <li>
-              <Link to="/student">
-                <BiUser /> <span>O'quvchilar</span>
-                <SlArrowRight />
-              </Link>
-            </li>
-            <li>
-              <Link to="/schedule">
-                <BsCardList /> <span>Dars jadvali</span>
-                <SlArrowRight />
-              </Link>
-            </li>
-            <li>
-              <Link to="/setting">
-                <TfiSettings /> <span>Sozlamalar</span>
-                <SlArrowRight />
-              </Link>
-            </li>
-            <li>
-              <Link to="/help">
-                <SlQuestion /> <span>Yordam</span>
-                <SlArrowRight />
-              </Link>
-            </li>
+            <CustomLink to="/">
+              <TiKeyOutline /> <span>Dashboard</span>
+            </CustomLink>
+            <CustomLink to="/group">
+              <HiOutlineCube /> <span>Guruhlar</span>
+              <SlArrowRight />
+            </CustomLink>
+            <CustomLink to="/student">
+              <BiUser /> <span>O'quvchilar</span>
+              <SlArrowRight />
+            </CustomLink>
+            <CustomLink to="/schedule">
+              <BsCardList /> <span>Dars jadvali</span>
+              <SlArrowRight />
+            </CustomLink>
+            <CustomLink to="/setting">
+              <TfiSettings /> <span>Sozlamalar</span>
+              <SlArrowRight />
+            </CustomLink>
+            <CustomLink to="/help">
+              <SlQuestion /> <span>Yordam</span>
+              <SlArrowRight />
+            </CustomLink>
           </ul>
         </div>
         <div className="left-bottom">
@@ -101,6 +89,19 @@ const LeftMenu = () => {
         </div>
       </div>
     </div>
+  );
+};
+
+const CustomLink = ({ to, children, ...props }) => {
+  const resolvedPath = useResolvedPath(to);
+  const isActive = useMatch({ path: resolvedPath.pathname, end: false });
+
+  return (
+    <li className={isActive ? "active" : ""}>
+      <Link to={to} {...props}>
+        {children}
+      </Link>
+    </li>
   );
 };
 
