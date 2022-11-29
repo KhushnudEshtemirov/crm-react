@@ -142,16 +142,6 @@ const Student = () => (
                   <button className="inactive">Inactive</button>
                 </td>
               </tr>
-              <tr>
-                <td>Marvin McKinney</td>
-                <td>Tesla</td>
-                <td>(225) 555-0118</td>
-                <td>697 000</td>
-                <td>Frontend 010</td>
-                <td>
-                  <button className="active">Active</button>
-                </td>
-              </tr>
             </tbody>
           </table>
         </div>
@@ -160,7 +150,7 @@ const Student = () => (
             <li>
               <HiChevronLeft />
             </li>
-            <li>1</li>
+            <li className="active">1</li>
             <li>2</li>
             <li>3</li>
             <li>4</li>

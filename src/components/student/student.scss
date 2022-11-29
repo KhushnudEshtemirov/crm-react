@@ -168,17 +168,45 @@
       }
 
       .pagination {
-        margin-top: 10px;
-        
+        margin-top: 20px;
+
         ul {
           height: 30px;
           display: flex;
           list-style: none;
           justify-content: flex-end;
+          gap: 20px;
 
           li {
             display: flex;
             align-items: center;
+            padding: 5px 8px;
+            background: #EEEEEE;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: 0.3s;
+
+            &.active {
+              background: #5932EA;
+              padding: 5px 14px !important;
+              color: #fff;
+            }
+
+            &:hover {
+              background: #5932EA;
+              color: #fff;
+            }
+
+            &:nth-child(2),
+            &:nth-child(3),
+            &:nth-child(4),
+            &:nth-child(5) {
+              padding: 5px 12px;
+            }
+
+            &:nth-child(6) {
+              background: none;
+            }
           }
         }
       }
