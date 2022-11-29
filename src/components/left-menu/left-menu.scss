@@ -207,14 +207,20 @@
             &:hover span {
               display: block;
             }
+            
+            a {
+              justify-content: center;
+              
+              svg {
+                margin: 0;
+              }
 
-            svg {
-              margin: 0;
+              svg:last-child {
+                display: none;
+              }
             }
 
-            svg:last-child {
-              display: none;
-            }
+
           }
         }
       }
